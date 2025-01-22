@@ -1,4 +1,4 @@
-# GROUP 10 : First Steps :
+# GROUP 10 :
 
 Install Nodemon: `npm install -g nodemon`
 
