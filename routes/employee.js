@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
-/* udate for employee service */
+
+
 const EmployeeService = require('../services/employeeService');
 const employeeService = new EmployeeService();
 
@@ -26,13 +27,13 @@ router.get('/', (req, res) => {
 
 // Read a employee by ID
 router.get('/:id', (req, res) => {
-  const employee = employeeService.getEmployeeById(parseInt(req.params.id));
+  const employee = employeeService.getEmployeeByID(parseInt(req.params.id));
   if (!employee) return res.status(404).send('Employee not found');
   res.render('employee', { employee: employee })
 });
 
 
-/*
+
 // Update a user by ID form
 router.get('/update/:id', (req, res) => {
   const user = userService.getUserById(parseInt(req.params.id));
@@ -60,5 +61,5 @@ router.post('/delete/:id', (req, res) => {
   if (!deletedUser) return res.status(404).send('User not found');
   res.redirect('/users')
 });
-*/
+
 module.exports = router;
