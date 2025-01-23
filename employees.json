@@ -1,0 +1,10 @@
+[
+    {
+      "id": 1,
+      "name": "Patrick",
+      "address": "123 Big Road, Big Town, BT1 1AA",
+      "salary": "£10000000",
+      "role": "CEO",
+      "employeeNumber": 1
+    }
+  ]
