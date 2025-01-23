@@ -1,10 +1,37 @@
 [
     {
-      "id": 1,
-      "name": "Patrick",
-      "address": "123 Big Road, Big Town, BT1 1AA",
-      "salary": "£10000000",
-      "role": "CEO",
-      "employeeNumber": 1
-    }
+        "id": 1,
+        "name": "Patrick",
+        "address": "123 Big Road, Big Town, BT1 1AA",
+        "salary": "£10000000",
+        "role": "CEO",
+        "employeeNumber": 1
+      },
+  
+      {
+        "id": 2,
+        "name": "Bailey",
+        "address": "123 Small Avenue, Small Village, BT1 1AA",
+        "salary": "£100",
+        "role": "Janitor",
+        "employeeNumber": 2
+      }, 
+  
+      {
+        "id": 3,
+        "name": "Chris",
+        "address": "123 Giant Street, Giant Hamlet, BT1 1AA",
+        "salary": "£1000000",
+        "role": "Head JavaScript Developer",
+        "employeeNumber": 3
+      },
+  
+      {
+        "id": 4,
+        "name": "Anna",
+        "address": "123 Little Lane, Little City, BT1 1AA",
+        "salary": "£1000000",
+        "role": "Head CSS Developer",
+        "employeeNumber": 4
+      }
   ]
