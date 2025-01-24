@@ -31,6 +31,8 @@
                         <td><%= employee.role %></td>
                         <td><%= employee.employeeNumber %></td>
                         <td><a href="/employees/<%= employee.id %>">View</a></td>
+                        <td><a href="/employees/update/<%= employee.id %>">Update</a></td>
+                        <td><a href="/employees/delete/<%= employee.id %>">Delete</a></td>
                     </tr>
                 <% }); %>
             </tbody>

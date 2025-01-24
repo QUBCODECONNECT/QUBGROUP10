@@ -32,7 +32,7 @@ class EmployeeService {
     }
 
     // Get a employee by ID
-    getEmployeeByID(id) {
+    getEmployeeById(id) {
         const employees = this.readEmployees();
         return employees.find(employee => employee.id === id);
     }

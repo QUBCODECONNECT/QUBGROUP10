@@ -30,5 +30,14 @@
     "salary": "£1000000",
     "role": "Head CSS Developer",
     "employeeNumber": 4
+  },
+  {
+    "name": "The New Guy",
+    "email": "newguy@email.com",
+    "address": "1236 New Guy Way",
+    "salary": "£100",
+    "role": "Cleaner",
+    "employeeNumber": "6",
+    "id": 5
   }
 ]
