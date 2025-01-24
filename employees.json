@@ -39,5 +39,13 @@
     "role": "Cleaner",
     "employeeNumber": "6",
     "id": 5
+  },
+  {
+    "name": "Another Guy",
+    "address": "Four Winds",
+    "salary": "£1000",
+    "role": "Clerk",
+    "employeeNumber": "76",
+    "id": 6
   }
 ]
