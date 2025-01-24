@@ -17,6 +17,15 @@ class EmployeeService {
         }
     }
 
+    // Helper function to write employees to JSON file
+    writeEmployees(employees) {
+        try {
+            fs.writeFileSync(this.filePath, JSON.stringify(employees, null, 2), 'utf8');
+        } catch (err) {
+            console.error('Error writing employees:', err);
+        }
+    }
+
     // Get all employees
     getAllEmployees() {
         return this.readEmployees();
@@ -26,6 +35,38 @@ class EmployeeService {
     getEmployeeByID(id) {
         const employees = this.readEmployees();
         return employees.find(employee => employee.id === id);
+    }
+
+    // Create a new employee
+    createEmployee(newEmployee) {
+        const employees = this.readEmployees();
+        newEmployee.id = employees.length ? employees[employees.length - 1].id + 1 : 1;
+        employees.push(newEmployee);
+        this.writeEmployees(employees);
+        return newEmployee;
+    }
+
+    // Update a employee by ID
+    updateEmployee(id, updatedEmployee) {
+        const employees = this.readEmployees();
+        const employeeIndex = employees.findIndex(employee => employee.id === id);
+        if (employeeIndex === -1) return null;
+
+        updatedEmployee.id = id;
+        employees[employeeIndex] = updatedEmployee;
+        this.writeEmployees(employees);
+        return updatedEmployee;
+    }
+
+    // Delete a employee by ID
+    deleteEmployee(id) {
+        const employees = this.readEmployees();
+        const employeeIndex = employees.findIndex(employee => employee.id === id);
+        if (employeeIndex === -1) return null;
+
+        const deletedEmployee = employees.splice(employeeIndex, 1);
+        this.writeEmployees(employees);
+        return deletedEmployee[0];
     }
 }
 
