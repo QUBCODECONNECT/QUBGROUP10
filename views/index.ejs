@@ -5,7 +5,36 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
+    <header class="headbanner">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam provident aliquid dolorum repellat sunt minus nesciunt ullam dignissimos doloremque iusto minima, suscipit officiis! Nostrum ratione nesciunt architecto, assumenda officia quis.</header>
+
+    
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
+    <h1>Sign In</h1>
+
+    <form action="/employees/" method="get">
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" placeholder="name@email.com"><br>
+
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password" minlength="8" maxlength="20" required><br>
+        <button type="button" id="togglePassword">Show</button>
+
+        <a href="employees.ejs"><input type="submit" value="Submit"></a>
+    </form> 
+
+    <script>
+      const passwordField = document.getElementById("password");
+      const togglePasswordButton = document.getElementById("togglePassword");
+  
+      togglePasswordButton.addEventListener("click", () => {
+        // Toggle the type attribute
+        const type = passwordField.type === "password" ? "text" : "password";
+        passwordField.type = type;
+  
+        // Change the button text
+        togglePasswordButton.textContent = type === "password" ? "Show" : "Hide";
+      });
+    </script>
   </body>
 </html>
